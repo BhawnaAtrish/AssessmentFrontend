@@ -11,12 +11,7 @@ function App() {
   return (
     <>
       <Nav />
-      <Router>
-        <Routes>
-          <Route exact path="/" element={<Grid />} />
-        </Routes>
-      </Router>
-
+      <Grid/>
     </>
   );
 }
