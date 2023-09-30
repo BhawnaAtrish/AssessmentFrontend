@@ -78,7 +78,7 @@ export default function GridComponent() {
       body: formdata,
       redirect: 'follow'
     };
-    fetch("http://127.0.0.1:8000/project_information/filter_projects/", requestOptions)
+    fetch("https://bhawnaatrish.pythonanywhere.com/project_information/filter_projects/", requestOptions)
       .then((response) => response.json())
       .then((data) => {
         setData(data.data);
@@ -89,7 +89,7 @@ export default function GridComponent() {
   };
 
   useEffect(() => {
-    fetch("http://127.0.0.1:8000/project_information/get_project_list/")
+    fetch("https://bhawnaatrish.pythonanywhere.com/project_information/get_project_list/")
       .then((response) => response.json())
       .then((data) => {
         setProjectTechnology(data.unique_technologies);
@@ -102,7 +102,7 @@ export default function GridComponent() {
         console.error("Error fetching data:", error);
       });
 
-    fetch("http://127.0.0.1:8000/project_information/filter_projects/")
+    fetch("https://bhawnaatrish.pythonanywhere.com/project_information/filter_projects/")
       .then((response) => response.json())
       .then((data) => {
         setData(data.data);
